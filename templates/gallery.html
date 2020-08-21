@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery Filter</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="static/css/gallery.css">
+  <style type="text/css">
+    a:hover{
+      text-decoration: none;
+    }
+
+    .gallery-top-text li a{ 
+      border: 1px solid #797979; 
+      padding: 8px 15px;
+      border-radius: 50px; 
+      color: #797979;    
+      display: inline-block;    
+      margin: 3px 0;
+    }  
+
+    .filter-button.active{
+      background: #797979; 
+      color: #fff;
+    }
+
+    .filter {
+      border: 1px solid #fff; 
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 20%;
+      width: 100%; 
+      opacity: 0; 
+      transition: .5s ease; 
+      background-color: #008CBA; 
+    }
+
+    .filter:hover .overlay {
+      opacity: 0.8; 
+    }
+
+    .text {
+      color: #000; 
+      font-size: 10px;
+      font-weight: bold; 
+      position: absolute; 
+      top: 50%; left: 50%; 
+      -webkit-transform: translate(-50%, -50%); 
+      -ms-transform: translate(-50%, -50%); 
+      transform: translate(-50%, -50%);
+      text-align: center; 
+    }
+  </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+	        <div class="row mt-4">
+	            <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center">
+	                <h1 class="gallery-title">{{ label }}</h1>
+	            </div>
+	        </div>
+	        <div class="row mt-5">
+	            <div class="col-sm-12">
+	            	<div class="gallery_filter_tab">
+	            		<ul class="list-inline gallery-top-text">
+                    <li class="list-inline-item ">
+                      <a href="javascript:void(0);" class="filter-button active" data-filter="all">{{ date }}</a>                      
+                    </li>                   
+	            		</ul>
+	            	</div> 
+	        	</div>	        	
+	        </div> 
+	    </div>
+        <div class="row no-gutters">
+
+          {% for photo in photos %}
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 filter Branding">
+                <img src="static/predictions/{{ date }}/{{ label }}/{{ photo }}" class="img-fluid">  
+                <div class="overlay">
+				          <div class="text">{{ photo }}</div>
+				        </div>
+            </div>
+          {% endfor %}
+
+        </div>
+<!-- partial -->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+    <script>
+      $(document).ready(function(){
+        $(".filter-button").click(function(){
+          var value = $(this).attr('data-filter');
+          if(value == "all")
+          { 
+            $('.filter').show();
+          }
+          else
+          { 
+            $(".filter").not('.'+value).hide();
+            $('.filter').filter('.'+value).show();
+          }
+          if ($(".filter-button").removeClass("active")) {
+            $(this).addClass("active");
+          }
+        });
+        $(this).addClass("active");
+      });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>Video</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+
+	        // setInterval(function() {
+	        //     var req = new XMLHttpRequest();
+	        //     req.open('GET', '/get_prediction', true);
+	        //     req.onreadystatechange = function(e) {
+	        //         if(req.readyState !== 4) {
+	        //             return;
+	        //         }
+	        //         if ([200, 304].indexOf(req.status) === -1) {
+	        //             console.warn('Error! XHR failed.');
+	        //         }
+	        //         else {
+	        //             data = JSON.parse(e.target.responseText);
+	        //             // processData();
+	        //             console.log(data);
+	        //             // $("#try").html(data.data);
+	        //             // updateChart();
+	        //         }
+	        //     };
+	        //     req.send();
+	        // }, 1000);
+
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="../static/app.css">
+
+		<style type="text/css">
+
+			body{
+				background-color: #EBEBEB;
+			}
+			#imgDetect{
+				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			}
+			h1{
+				font-family: "Comfortaa", cursive;
+			}
+		</style>
+
+	</head>
+
+<body>
+	<center><h1>AI Weapon Detection</h1></center>
+	<!-- <center><img id="detect" style="background-color: #dedede;" src="{{ url_for('video_feed') }}" width="700" height="500"></center> -->
+
+	<center><img id="imgDetect" style="background-color: #fff;" src="../static/hospital_building.jpg" width="480" height="320"></center>
+
+	<center><button id="btnStartDetection" onclick='startDetection()'>Start Detection</button></center>
+
+	<script type="text/javascript">
+
+		function startDetection(){
+			if (document.getElementById("imgDetect").getAttribute("src") == "../static/hospital_building.jpg"){
+				document.getElementById("imgDetect").setAttribute("src", "{{ url_for('video_feed') }}");	
+				document.getElementById("btnStartDetection").innerHTML = "Stop Detection";	
+
+				console.log("Detection started!");		
+			}else{
+				document.getElementById("imgDetect").setAttribute("src", "../static/hospital_building.jpg");	
+				document.getElementById("btnStartDetection").innerHTML = "Start Detection";	
+
+				console.log("Detection stoped!");
+			}
+		}
+	</script>
+</body>
+
+</html>

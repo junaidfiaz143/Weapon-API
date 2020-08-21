@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,200' rel='stylesheet' type='text/css'>
+	<link rel="icon" type="image" href="sun.png">
+	<!-- <link rel="stylesheet" type="text/css" href="static/css/homeStyle.css"> -->
+	<link rel="stylesheet" type="text/css" href="static/css/animate.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="mmm.js"></script>
+	<title>AI</title>
+	<style type="text/css">
+		
+		body{
+			background-image: url(static/css/wallpaper.jpg);
+
+			background-size: 100% 720px;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+
+			user-select: none;
+			-ms-user-select: none;
+			-o-user-select:none;
+			-moz-user-select: none;
+			-khtml-user-select: none;
+			-webkit-user-select: none;
+			-webkit-touch-callout: none;
+		}
+
+		.logo p{
+			margin-top: -3px;
+			font-family: "Roboto", sans-serif;
+			color: rgba(255, 255, 255, 0.9);
+		}
+
+		.menu{
+			font-family: "Roboto", sans-serif;
+			font-style: bold;
+			font-size: 30px;
+			color: rgba(255, 255, 255, 1);
+			font-weight: bolder;
+
+			cursor: default;
+		}
+
+		.footer p{
+			font-size: 15px;
+			text-align: center;
+			font-family: "Roboto", sans-serif;
+			color: rgba(255, 255, 255, 0.9);
+		}
+
+		#inventor{
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		#beta{
+			font-size: 20px;
+			font-weight: 100;
+		}
+		
+		.icon{
+			width: 120px;
+			height: 120px;
+			background-color: white;
+			display: inline-block;
+			margin: 40px 20px 0px 20px;
+			border-radius: 30px;
+			text-align: center;
+			cursor: pointer;
+			-webkit-animation-delay: 0.8s;
+		}
+		.icon img{
+			width: 60px;
+			height: 60px;
+			position:absolute;
+			margin-top: 30px;
+			margin-left: -28px;
+		}
+		#home{
+			background: linear-gradient(#feac5e,#c779d0);
+		}
+		#contacts{
+			background: linear-gradient(#D38312, #A83279);
+		}
+		#about{
+			background: linear-gradient(#43cea2, #185a9d);
+		}
+		#services{
+			background: linear-gradient(#f2709c, #ff9472);
+		}
+		#team{
+			background: linear-gradient(#70e1f5, #ffd194);
+		}
+		#blog{
+			background: linear-gradient(#185a9d, #D38312);
+		}
+		.icon p{
+			color: white;
+			font-size:15px;
+			font-weight: bold;
+			font-family:"Roboto", sans-serif; 
+			padding-top: 110px;
+		}
+
+		.container {
+			width: 33rem;
+			height: 25rem;
+			box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);	
+			border-radius: 30px;
+			position: relative;
+			z-index: 1;
+			background: inherit;
+			overflow: hidden;	
+			/*filter: blur(4px);*/
+		}
+
+		.container:before {
+			content: "";
+			position: absolute;
+			background-color: #000;
+			/*background: inherit;*/
+			z-index: -1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			/*box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);*/
+			/*filter: blur(8px);*/
+			margin: -0px;
+			opacity: 0.5;
+			/*-webkit-filter: blur(8px);*/
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<div class="logo">
+			<p id="inventor">Weapon Detection<span id="beta"> - Beta</span> <span style="float:right">M. Junaid</span></p>
+		</div>
+
+	</div>
+
+
+		<div class="menu" style="">
+			<center><p>Menu</p></center>
+		</div>
+
+
+	<center>
+
+		<div class="container">
+					<div class="icon animated zoomIn" id="home">
+			<img src="static/css/message.png">
+			<center><p>CCTV</p></center>
+		</div>
+
+		<div class="icon animated zoomIn" id="contacts">
+			<img src="static/css/message.png">
+			<center><p>DATES</p></center>
+		</div>
+
+		<div class="icon animated zoomIn" id="about">
+			<img src="static/css/message.png">
+			<center><p>STATS</p></center>
+		</div>
+
+		<br>
+
+		<div class="icon animated zoomIn" id="blog">
+			<img src="static/css/message.png">
+			<center><p>NOTIFICATION</p></center>
+		</div>
+
+				<div class="icon animated zoomIn" id="services">
+			<img src="static/css/message.png">
+			<center><p>ACCOUNTS</p></center>
+		</div>
+
+		<div class="icon animated zoomIn" id="team">
+			<img src="static/css/message.png">
+			<center><p>SETTINGS</p></center>
+		</div>
+		</div>
+
+	</center>
+
+		<div class="footer">
+			<center><p>Copyright 2019</p></center>
+		</div>
+</body>
+</html

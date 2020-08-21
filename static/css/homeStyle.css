@@ -1,0 +1,89 @@
+
+		body{
+			background-image: url(mountains.png);
+			background-size: 100% 720px;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+
+		.logo p{
+			margin-top: -3px;
+			font-family: "Roboto", sans-serif;
+			color: rgba(255, 255, 255, 0.9);
+		}
+
+		.menu p{
+			text-align: center;
+			font-family: "Roboto", sans-serif;
+			font-style: bold;
+			font-size: 30px;
+			color: rgba(255, 255, 255, 0.9);
+			cursor: default;
+		}
+
+		.footer p{
+			text-align: center;
+			bottom :0px;
+			position: absolute;
+			font-family: "Roboto", sans-serif;
+			margin-left: 48%;
+			color: rgba(255, 255, 255, 0.9);
+		}
+
+		#inventor{
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		#beta{
+			font-size: 20px;
+			font-weight: 100;
+		}
+		
+		.icon{
+			width: 120px;
+			height: 120px;
+			background-color: white;
+			display: inline-block;
+			margin-left: 50px;
+			border-radius: 30px;
+			margin-top: 60px;
+			text-align: center;
+			cursor: pointer;
+			-webkit-animation-delay: 0.8s;
+		}
+		.icon img{
+			width: 60px;
+			height: 60px;
+			position:absolute;
+			margin-top: 30px;
+			margin-left: -28px;
+		}
+		#home{
+			background: linear-gradient(#2196f3, lightblue);
+		}
+
+		#contacts{
+			background: linear-gradient(#FFEB3B, #FF9800);
+		}
+		#about{
+			background: linear-gradient(#D1AA4D, orange);
+		}
+		#services{
+			background-color: #000000;
+		}
+		#team{
+			background: linear-gradient(lightblue, #2196f3);
+		}
+		#blog{
+			background: linear-gradient(#E835AF, #F2BBE1);
+		}
+		#calculator{
+			background: linear-gradient(#B08335, #F2CB88);
+		}
+		.icon p{
+			color: white;
+			font-size:20px;
+			font-family:"Roboto", sans-serif; 
+			padding-top: 100px;
+		}
